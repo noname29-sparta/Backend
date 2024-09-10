@@ -1,6 +1,6 @@
 package com.project.p_hub.presentation.controller;
 
-import com.project.p_hub.presentation.resonse.HubResponse;
+import com.project.p_hub.presentation.response.HubResponse;
 import com.project.p_hub.application.service.HubService;
 import com.project.p_hub.presentation.request.HubRequest;
 import com.project.p_hub.presentation.request.SearchHubRequest;

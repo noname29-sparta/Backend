@@ -1,4 +1,4 @@
-package com.project.p_hub.presentation.resonse;
+package com.project.p_hub.presentation.response;
 
 import com.project.p_hub.domain.model.Hub;
 import lombok.*;
