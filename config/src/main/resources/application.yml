@@ -3,20 +3,18 @@ server:
 
 spring:
   application:
-    name: config-server
+    name: config-service
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/noname29-sparta/Backend/tree/delivery/config
+          uri: https://github.com/noname29-sparta/Backend/config
           search-paths: config-file/**
           default-label: delivery
 
 management:
   endpoints:
-    web:
-      exposure:
-        include: "*"
+    enabled-by-default: false
   endpoint:
-    shutdown:
+    info:
       enabled: true
