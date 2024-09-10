@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/noname29-sparta/Backend/config
+          uri: https://github.com/noname29-sparta/Backend
           search-paths: config-file/**
           default-label: delivery
 
