@@ -1,4 +1,4 @@
-package com.project.p_auth.application;
+package com.project.p_auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

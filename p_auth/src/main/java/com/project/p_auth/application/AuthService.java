@@ -87,4 +87,9 @@ public class AuthService {
             throw new IllegalArgumentException("이미 해당 이메일 존재함");
         }
     }
+
+    public Boolean verifyUser(final String userId) {
+        // userId 로 User 를 조회 후 isPresent() 로 존재유무를 리턴함
+        return userRepository.findById(UUID.fromString(userId)).isPresent();
+    }
 }

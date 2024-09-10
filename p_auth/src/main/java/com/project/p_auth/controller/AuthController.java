@@ -6,10 +6,7 @@ import com.project.p_auth.application.dtos.LoginRequest;
 import com.project.p_auth.application.dtos.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth/")
@@ -45,5 +42,10 @@ public class AuthController {
     public ResponseEntity<AuthResponse> signIn(@RequestBody LoginRequest loginRequest) {
         return ResponseEntity.ok()
                 .body(authService.signIn(loginRequest));
+    }
+    @GetMapping("/verify")
+    public ResponseEntity<Boolean> verifyUser(final @RequestParam(value = "user_id") String userId) {
+        return ResponseEntity.ok()
+                .body(authService.verifyUser(userId));
     }
 }
