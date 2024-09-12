@@ -3,7 +3,7 @@ package com.project.p_hub.application.service;
 import com.project.p_hub.application.dtos.HubDto;
 import com.project.p_hub.presentation.response.HubResponse;
 import com.project.p_hub.domain.model.Hub;
-import com.project.p_hub.domain.repository.HubRepository;
+import com.project.p_hub.domain.repository.hub.HubRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

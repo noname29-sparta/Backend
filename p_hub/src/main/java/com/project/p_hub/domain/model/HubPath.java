@@ -15,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name="p_hub_paths")
-public class HubPath {
+public class HubPath extends BaseEntity{
 
     @Id
     private UUID id;
@@ -26,4 +26,27 @@ public class HubPath {
 
     private Duration travelTime;
 
+    private String displayName; // 이동 경로 전시명 (Optional)
+
+
+    public static HubPath create(UUID startHubId, UUID endHubId, Duration travelTime, String displayName) {
+        return HubPath.builder()
+                .id(UUID.randomUUID())
+                .startHubId(startHubId)
+                .endHubId(endHubId)
+                .travelTime(travelTime)
+                .displayName(displayName)
+                .build();
+    }
+
+    public void update(UUID startHubId, UUID endHubId, Duration travelTime, String displayName) {
+        this.startHubId = startHubId;
+        this.endHubId = endHubId;
+        this.travelTime = travelTime;
+        this.displayName = displayName;
+    }
+
+    public void delete(Boolean is_delete) {
+        this.setIs_delete(is_delete);
+    }
 }

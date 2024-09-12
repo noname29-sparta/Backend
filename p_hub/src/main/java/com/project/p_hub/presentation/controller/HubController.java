@@ -2,9 +2,9 @@ package com.project.p_hub.presentation.controller;
 
 import com.project.p_hub.presentation.response.HubResponse;
 import com.project.p_hub.application.service.HubService;
-import com.project.p_hub.presentation.request.HubRequest;
-import com.project.p_hub.presentation.request.SearchHubRequest;
-import com.project.p_hub.presentation.request.UpdateHubRequest;
+import com.project.p_hub.presentation.request.hub.HubRequest;
+import com.project.p_hub.presentation.request.hub.SearchHubRequest;
+import com.project.p_hub.presentation.request.hub.UpdateHubRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
