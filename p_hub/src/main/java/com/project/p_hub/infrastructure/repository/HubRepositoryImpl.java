@@ -59,6 +59,9 @@ public class HubRepositoryImpl implements HubRepository {
 
         BooleanBuilder whereBuilder = new BooleanBuilder();
 
+        // is_delete 가 false 인것만 조회
+        whereBuilder.and(hub.is_delete.eq(false));
+
         if (StringUtils.hasText(request.getName())) {
             whereBuilder.and(hub.name.containsIgnoreCase(request.getName()));
         }
