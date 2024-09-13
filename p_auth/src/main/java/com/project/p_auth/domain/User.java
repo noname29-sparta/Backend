@@ -47,4 +47,7 @@ public class User {
                 .email(email)
                 .build();
     }
+    public void updateRole(UserRoleEnum userRoleEnum){
+        this.role = userRoleEnum;
+    }
 }
