@@ -29,10 +29,6 @@ public class Hub extends BaseEntity{
 
     private String address;
 
-    @ElementCollection
-    @Column(name = "manager_ids")
-    private List<UUID> managers = new ArrayList<>();
-
     public static Hub create(String name, String city, Double latitude, Double longitude, String address) {
         return Hub.builder()
                 .id(UUID.randomUUID())

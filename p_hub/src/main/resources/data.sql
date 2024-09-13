@@ -17,3 +17,42 @@ INSERT INTO p_hubs (id, name, city, latitude, longitude, address, created_at, is
                                                                               (gen_random_uuid(), '경상북도 센터', '경상북도', 36.568354, 128.725448, '경북 안동시 풍천면 도청대로 455', NOW(), false),
                                                                               (gen_random_uuid(), '경상남도 센터', '경상남도', 35.238583, 128.655771, '경남 창원시 의창구 중앙대로 300', NOW(), false);
 
+INSERT INTO p_hub_paths (id, start_hub_id, end_hub_id, travel_time, display_name, is_delete, created_at)
+SELECT
+    gen_random_uuid(),
+    start_hub.id,
+    end_hub.id,
+    '90000000',  -- 문자열 형식으로 이동 시간 설정
+    CONCAT(start_hub.name, ' -> ', end_hub.name),
+    false,
+    now()
+FROM
+    p_hubs start_hub
+        JOIN p_hubs end_hub
+             ON start_hub.id <> end_hub.id
+WHERE
+   -- 원하시는 이동 경로의 규칙을 정의합니다.
+    (start_hub.name = '서울특별시 센터' AND end_hub.name = '경기 북부 센터') OR
+    (start_hub.name = '경기 북부 센터' AND end_hub.name = '서울특별시 센터') OR
+    (start_hub.name = '경기 북부 센터' AND end_hub.name = '경기 남부 센터') OR
+    (start_hub.name = '경기 남부 센터' AND end_hub.name = '경기 북부 센터') OR
+    (start_hub.name = '경기 남부 센터' AND end_hub.name = '부산광역시 센터') OR
+    (start_hub.name = '부산광역시 센터' AND end_hub.name = '경기 남부 센터') OR
+    (start_hub.name = '전라남도 센터' AND end_hub.name = '전북특별자치도 센터') OR
+    (start_hub.name = '전북특별자치도 센터' AND end_hub.name = '전라남도 센터') OR
+    (start_hub.name = '전북특별자치도 센터' AND end_hub.name = '충청남도 센터') OR
+    (start_hub.name = '충청남도 센터' AND end_hub.name = '전북특별자치도 센터') OR
+    (start_hub.name = '충청남도 센터' AND end_hub.name = '충청북도 센터') OR
+    (start_hub.name = '충청북도 센터' AND end_hub.name = '충청남도 센터') OR
+    (start_hub.name = '충청북도 센터' AND end_hub.name = '강원특별자치도 센터') OR
+    (start_hub.name = '강원특별자치도 센터' AND end_hub.name = '충청북도 센터');
+
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+
+
+
+
+
+
+

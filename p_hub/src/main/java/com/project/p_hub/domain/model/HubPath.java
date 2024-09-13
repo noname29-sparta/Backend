@@ -28,6 +28,9 @@ public class HubPath extends BaseEntity{
 
     private String displayName; // 이동 경로 전시명 (Optional)
 
+    public HubPath(UUID startHubId, UUID endHubId) {
+    }
+
 
     public static HubPath create(UUID startHubId, UUID endHubId, Duration travelTime, String displayName) {
         return HubPath.builder()
