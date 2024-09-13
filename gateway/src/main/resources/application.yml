@@ -21,6 +21,14 @@ spring:
           uri: lb://auth-service
           predicates:
             - Path=/auth/signIn
+        - id: delivery-service
+          uri: lb://delivery-service
+          predicates:
+            - Path=/deliveries/**
+        - id: hub-service
+          uri: lb://hub-service
+          predicates:
+            - Path=/hubs/**
       discovery:
         locator:
           enabled: true
