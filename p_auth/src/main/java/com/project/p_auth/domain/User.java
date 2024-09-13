@@ -12,7 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder(access = AccessLevel.PRIVATE)
 
-public class User {
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")
@@ -49,5 +49,8 @@ public class User {
     }
     public void updateRole(UserRoleEnum userRoleEnum){
         this.role = userRoleEnum;
+    }
+    public void delete(){
+        this.setIs_delete(true);
     }
 }

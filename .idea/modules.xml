@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/p_delivery.main.iml" filepath="$PROJECT_DIR$/.idea/modules/p_delivery.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/p_hub.main.iml" filepath="$PROJECT_DIR$/.idea/modules/p_hub.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/p_auth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/p_auth.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/p_order.main.iml" filepath="$PROJECT_DIR$/.idea/modules/p_order.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/p_product.main.iml" filepath="$PROJECT_DIR$/.idea/modules/p_product.main.iml" />
     </modules>
