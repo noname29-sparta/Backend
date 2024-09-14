@@ -4,6 +4,7 @@ package com.project.p_hub.infrastructure.repository.hub;
 import com.project.p_hub.application.dtos.HubDto;
 import com.project.p_hub.domain.model.Hub;
 import com.project.p_hub.domain.model.QHub;
+import com.project.p_hub.domain.model.QHubPath;
 import com.project.p_hub.domain.repository.hub.HubRepository;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -100,6 +101,7 @@ public class HubRepositoryImpl implements HubRepository {
 
         return new PageImpl<>(results, pageable, total);
     }
+
 
 
 }
