@@ -59,15 +59,7 @@ public class HubPathController {
         return ResponseEntity.ok().body(hubPathService.deleteHubPath(hubPathId));
     }
 
-    @GetMapping("/hubPaths")
-    public ResponseEntity<List<HubPath>> findPath(@RequestParam(name = "startHubId") UUID startHubId, @RequestParam(name = "endHubId") UUID endHubId) {
-        try {
-            List<HubPath> path = hubPathService.findPath(startHubId, endHubId);
-            return ResponseEntity.ok(path);
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().body(null);
-        }
-    }
+
 
 
 
