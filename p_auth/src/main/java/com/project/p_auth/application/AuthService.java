@@ -26,6 +26,7 @@ public class AuthService {
     private final SecretKey secretKey;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+
     public AuthService(UserRepository userRepository,
                        @Value("${service.jwt.secret-key}") String secretKey , PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
