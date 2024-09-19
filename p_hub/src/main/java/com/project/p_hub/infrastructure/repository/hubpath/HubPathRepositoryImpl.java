@@ -62,6 +62,8 @@ public class HubPathRepositoryImpl implements HubPathRepository {
         return null;
     }
 
+
+
 //    @Override
 //    public Page<HubPath> searchHubPaths(HubPathDto request, Pageable pageable) {
 //        QHubPath hubPath = QHubPath.hubPath;

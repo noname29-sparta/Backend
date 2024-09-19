@@ -14,4 +14,5 @@ public interface HubRepository{
     Optional<Hub> findById(UUID id);
     List<Hub> findAll();
     Page<Hub> searchHubs(HubDto request, Pageable pageable);
+
 }

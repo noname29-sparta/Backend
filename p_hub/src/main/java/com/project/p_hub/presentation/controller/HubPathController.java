@@ -3,6 +3,7 @@ package com.project.p_hub.presentation.controller;
 
 import com.project.p_hub.application.service.HubPathService;
 import com.project.p_hub.application.service.HubService;
+import com.project.p_hub.domain.model.HubPath;
 import com.project.p_hub.presentation.request.hub.HubRequest;
 import com.project.p_hub.presentation.request.hub.UpdateHubRequest;
 import com.project.p_hub.presentation.request.hubpath.HubPathRequest;
@@ -11,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -56,6 +58,9 @@ public class HubPathController {
 
         return ResponseEntity.ok().body(hubPathService.deleteHubPath(hubPathId));
     }
+
+
+
 
 
 }

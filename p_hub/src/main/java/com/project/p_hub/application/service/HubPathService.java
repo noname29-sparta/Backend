@@ -23,6 +23,7 @@ public class HubPathService {
     private final HubPathDomainService hubPathDomainService;
     private final HubRepository hubRepository;
 
+
     // 허브경로 생성
     @Transactional
     public HubPathResponse createHubPath(HubPathDto request) {
@@ -79,6 +80,7 @@ public class HubPathService {
         }).orElseThrow();
 
     }
+
 
 
 
