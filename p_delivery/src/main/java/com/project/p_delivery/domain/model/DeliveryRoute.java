@@ -43,6 +43,7 @@ public class DeliveryRoute extends BaseEntity{
                 .sequence(sequence)
                 .deliveryId(deliveryId)
                 .startHubId(startHubId)
+                .endHubId(endHubId)
                 .estimatedDistance(estimatedDistance)
                 .estimatedTime(estimatedTime)
                 .actualDistance(actualDistance)
